@@ -47,3 +47,10 @@ class ItemsWomens(models.Model):
 
     def __str__(self):
         return self.product_name
+
+
+class ItemsCategory(models.Model):
+    category = models.CharField(max_length=500, primary_key=True)
+
+    def __str__(self):
+        return self.category

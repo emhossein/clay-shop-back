@@ -24,6 +24,7 @@ SECRET_KEY = 'django-insecure-8lbzkthck8zpvuen@ne-ws4al)q2c2i+o5z+!@t*ij10qn=9=z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# add emhossein.pythonanywhere.com to ALLOWED_HOSTS on production
 ALLOWED_HOSTS = []
 
 # Application definition
@@ -75,7 +76,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'D:/Programmer/my-prj/backend/items_db.db',
+        'NAME': BASE_DIR / 'items_db.db',
     }
 }
 
