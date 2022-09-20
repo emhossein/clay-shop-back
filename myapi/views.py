@@ -21,5 +21,5 @@ class ItemWomensViewSet(viewsets.ModelViewSet):
 
 
 class ItemCategoriesViewSet(viewsets.ModelViewSet):
-    queryset = ItemsCategory.objects.raw('select distinct category from categories where category like "%mens >%"')
-    serializer_class = ItemCategory_serrializer
+    queryset = Items.objects.raw('SELECT distinct sub_category, id from items group by sub_category')
+    serializer_class = Item_serrializer
